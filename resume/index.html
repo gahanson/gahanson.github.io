@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="container">
+    <div class="container">
+      <div class="container">
+        <p></p>
+        <div class="card">
+          <div>
+            <a href="/assets/files/GeorgeHansonResume.pdf" download>Download One Page Resume PDF</a>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a href="/assets/files/GeorgeHansonResumeExpanded.pdf" download>Download Detailed Resume PDF</a>
+          </div>
+        </div>
+      </div>
+      <p></p>
+      <p></p>
+      <h2>George Hanson</h2>
+      <p></p>
+
+      <div class="container">
+        <h4><b>Experience</b></h4>
+        {% for workexperience in site.experiencesections %}
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title h5">{{ workexperience.title }}</div>
+              {{ workexperience.content }}
+              <p class="card-full-text text-left">
+                {% for card in site.experiencecards %}
+                  {% if workexperience.section == card.section %}
+                    <h5><a href="{{ card.url }}">{{ card.title }}</a></h5>
+                  {% endif %}
+                {% endfor %}
+              </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <p></p>
+      <div class="container">
+        <h4><b>Education</b></h4>
+        {% for educations in site.education %}
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title h5">{{ educations.title }}</div>
+              <p class="card-full-text text-left">
+                {{ educations.content }}
+              </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
