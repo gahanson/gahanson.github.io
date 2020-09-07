@@ -1,0 +1,6 @@
+I"=<p>Designed, implemented and deployed REST web api.<br />
+Api implemented using Django REST Framework.<br />
+Version control implemented but not authorization.<br />
+Initially deployed using Apache installed on Windows server.<br />
+Final deployment in a Docker container using automation server running Jenkins.</p>
+:ET
